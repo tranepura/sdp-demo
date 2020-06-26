@@ -1,0 +1,225 @@
+<?php
+
+/**
+ * @file
+ * Contains tide_core.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+use Drupal\scheduled_transitions\Routing\ScheduledTransitionsRouteProvider;
+use Drupal\scheduled_transitions\ScheduledTransitionsPermissions;
+use Drupal\user\Entity\Role;
+use Drupal\views\ViewExecutable;
+use Drupal\workflows\Entity\Workflow;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_views_data_alter().
+ *
+ * @see \Drupal\node\NodeViewsData::getViewsData()
+ * @see \Drupal\tide_core\Plugin\views\filter\StatusModerated
+ */
+function tide_core_views_data_alter(array &$data) {
+  // Add Moderation support to Node 'status_extra' filter.
+  // Content Overview view uses the filter 'Published status or admin user'
+  // without any consideration of Content Moderation. We override this filter
+  // to add an extra check for the 'view any unpublished content' permission
+  // provided by the Content Moderation module.
+  $data['node_field_data']['status_extra']['filter']['id'] = 'node_status_moderated';
+}
+
+/**
+ * Implements hook_views_query_substitutions().
+ *
+ * @see node_views_query_substitutions()
+ * @see \Drupal\node\Plugin\views\filter\Status::query()
+ * @see \Drupal\tide_core\Plugin\views\filter\StatusModerated::query()
+ */
+function tide_core_views_query_substitutions(ViewExecutable $view) {
+  $account = \Drupal::currentUser();
+  return [
+    '***VIEW_ANY_UNPUBLISHED_NODES***' => intval($account->hasPermission('view any unpublished content')),
+  ];
+}
+
+/**
+ * Implements hook_entity_operation().
+ */
+function tide_core_entity_operation(EntityInterface $entity) {
+  // Add "Archived" operation link to entities.
+  $operations = [];
+  $workflow = Workflow::load('editorial');
+  if ($workflow) {
+    if ($workflow->getTypePlugin()
+      ->appliesToEntityTypeAndBundle($entity->getEntityTypeId(), $entity->bundle())) {
+      if ($entity->access('use ' . $workflow->id() . ' transition archived')) {
+        $operations['archive'] = [
+          'title' => t('Archive'),
+          'weight' => 100,
+          'url' => Url::fromRoute('tide_core.entity.archive_confirm', ['bundle' => $entity->getEntityTypeId(), 'entity_type_id' => $entity->id()]),
+        ];
+      }
+    }
+  }
+  if ($entity->getEntityType()->hasLinkTemplate(ScheduledTransitionsRouteProvider::LINK_TEMPLATE_ADD)) {
+    $routeName = ScheduledTransitionsRouteProvider::getScheduledTransitionRouteName($entity->getEntityType());
+    $url = Url::fromRoute($routeName, [$entity->getEntityTypeId() => $entity->id()]);
+    $user = \Drupal::currentUser();
+    if (TRUE === $url->access($user)) {
+      $operations['scheduled_transitions'] = [
+        'title' => t('Scheduled updates'),
+        'url' => $url,
+        'weight' => 50,
+      ];
+    }
+  }
+
+  return $operations;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function tide_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $info = \Drupal::service('entity_type.bundle.info');
+  foreach ($info->getBundleInfo('node') as $bundle => $item) {
+    if ($form_id == 'node_' . $bundle . '_scheduled_transitions_add_form_form') {
+      // In this form, we only keep 'publish' and 'archive' options regardless
+      // of what permissions the user has.
+      if (isset($form['scheduled_transitions']['new_meta']['transition']['#options'])) {
+        foreach ($form['scheduled_transitions']['new_meta']['transition']['#options'] as $key => $option) {
+          if (!in_array($key, ['publish', 'archive'])) {
+            unset($form['scheduled_transitions']['new_meta']['transition']['#options'][$key]);
+          }
+        }
+      }
+      foreach (array_keys($form['actions']) as $action) {
+        if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+          $form['actions'][$action]['#value'] = t('Scheduled updates');
+          $form['actions'][$action]['#submit'][] = '_tide_core_modified_update_adding_message';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tide_core_form_scheduled_transition_delete_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#title'] = t('Are you sure you want to delete the Scheduled updates?');
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = '_tide_core_modified_update_delete_message';
+    }
+  }
+}
+
+/**
+ * Submit handler for altering updating status message.
+ */
+function _tide_core_modified_update_adding_message(&$form, $form_state) {
+  $messenger = \Drupal::messenger();
+  $messenger->deleteByType('status');
+  $onDate = $form_state->getValue(['on']);
+  $messenger->addMessage(t('Scheduled an update for @date', [
+    '@date' => \Drupal::service('date.formatter')
+      ->format($onDate->getTimestamp()),
+  ]));
+}
+
+/**
+ * Submit handler for altering deleting status message.
+ */
+function _tide_core_modified_update_delete_message(&$form, $form_state) {
+  $messenger = \Drupal::messenger();
+  $messenger->deleteByType('status');
+  $messenger->addMessage(t('The Scheduled update has been deleted.'), 'status');
+}
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function tide_core_menu_links_discovered_alter(&$links) {
+  if (isset($links['entity.scheduled_transition.collection']['title'])) {
+    $links['entity.scheduled_transition.collection']['title'] = 'Scheduled updates';
+  }
+  // TODO: delete after scheduled_updates module fully uninstalled.
+  if (isset($links['entity.scheduled_update.collection'])) {
+    unset($links['entity.scheduled_update.collection']);
+  }
+}
+
+/**
+ * Implements hook_menu_local_actions_alter().
+ */
+function tide_core_menu_local_actions_alter(&$local_actions) {
+  if (isset($local_actions['scheduled_transitions.actions:node.add_scheduled_transition']['title'])) {
+    $local_actions['scheduled_transitions.actions:node.add_scheduled_transition']['title'] = 'Add Scheduled update';
+  }
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function tide_core_local_tasks_alter(&$local_tasks) {
+  if (isset($local_tasks['scheduled_transitions.tasks:node.scheduled_transitions']['title'])) {
+    $local_tasks['scheduled_transitions.tasks:node.scheduled_transitions']['title'] = 'Scheduled updates';
+  }
+  // TODO: delete after scheduled_updates module fully uninstalled.
+  if (isset($local_tasks['scheduled_update.admin'])) {
+    unset($local_tasks['scheduled_update.admin']);
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function tide_core_entity_bundle_create($entity_type_id, $bundle) {
+  if ($entity_type_id == 'node') {
+    $roles = ['approver', 'site_admin'];
+    foreach ($roles as $role) {
+      $permissions = [];
+      $permissions[] = ScheduledTransitionsPermissions::viewScheduledTransitionsPermission($entity_type_id, $bundle);
+      $permissions[] = ScheduledTransitionsPermissions::addScheduledTransitionsPermission($entity_type_id, $bundle);
+      $permissions[] = 'view all scheduled transitions';
+      user_role_grant_permissions(Role::load($role)->id(), $permissions);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function tide_core_preprocess_status_messages(&$variables) {
+  if (isset($variables['message_list']['error']) && !empty($variables['message_list']['error'])) {
+    foreach ($variables['message_list']['error'] as &$error_message) {
+      if ($error_message instanceof Markup) {
+        $message = $error_message->__toString();
+        // We want to ensure that the error message to be altered under
+        // node edit context.
+        preg_match('/entity:node\/(\d+)/', $message, $matches);
+        // Checking that the error message comes from field_paragraph_link based
+        // on a node context.
+        if (strpos($message, 'Validation error on collapsed paragraph field_paragraph_link') !== FALSE && (isset($matches[1]) && is_numeric($matches[1]))) {
+          $error_message = t('A link in <i>Related links</i> field on this page is broken. Please update or remove the link and retry.');
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tide_core_form_content_moderation_entity_moderation_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['revision_log'])) {
+    $form['#attached']['library'] = 'tide_core/content_moderation';
+    $form['revision_log']['#type'] = 'textarea';
+    $form['revision_log']['#title'] = t('Publishing instructions and comments');
+    $form['revision_log']['#description'] = t('All content will be published within 24 hours. State below if your content is embargoed or time critical.');
+    $form['new_state']['#title'] = t('Change status to');
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "dpc-sdp/tide_test",
+    "description": "Test content type and related configuration for Tide Drupal 8 distribution",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require": {},
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    }
+}
