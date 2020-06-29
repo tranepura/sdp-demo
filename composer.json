@@ -225,7 +225,8 @@
         "post-install-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "Utilities\\composer\\DrupalSettings::create"
+            "Utilities\\composer\\DrupalSettings::create",
+            "sudo chown -R trdev:trdev  ."
         ],
         "post-update-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
