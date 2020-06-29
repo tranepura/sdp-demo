@@ -1,3 +1,0 @@
-media.source.audio:
-  type: media.source.field_aware
-  label: '"Audio" media source configuration'
