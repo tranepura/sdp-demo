@@ -5,9 +5,28 @@
     "require": {
         "composer/installers": "^1.2.0",
         "cweagans/composer-patches": "^1.6.0",
-        "dpc-sdp/tide_core": "dev-master",
+        "dpc-sdp/tide_alert": "1.0.1",
+        "dpc-sdp/tide_api": "1.5.0",
+        "dpc-sdp/tide_authenticated_content": "1.0.2",
+        "dpc-sdp/tide_core": "1.6.2",
+        "dpc-sdp/tide_demo_content": "1.1.1",
+        "dpc-sdp/tide_event": "1.3.1",
+        "dpc-sdp/tide_event_atdw": "1.0.0",
+        "dpc-sdp/tide_grant": "1.0.0",
+        "dpc-sdp/tide_landing_page": "1.2.5",
+        "dpc-sdp/tide_media": "1.7.0",
+        "dpc-sdp/tide_monsido": "1.1.5",
+        "dpc-sdp/tide_news": "1.1.6",
+        "dpc-sdp/tide_page": "1.2.6",
+        "dpc-sdp/tide_profile": "1.0.0",
+        "dpc-sdp/tide_publication": "1.0.2",
+        "dpc-sdp/tide_search": "1.1.8",
+        "dpc-sdp/tide_site": "1.4.0",
+        "dpc-sdp/tide_test": "^1.0",
+        "dpc-sdp/tide_webform": "1.3.0",
         "drupal-composer/drupal-scaffold": "^2.3",
         "drupal/core": "8.8.8",
+        "drupal/simple_sitemap": "^3.7",
         "drush/drush": "8.3.2",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0"
@@ -49,11 +68,6 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "dpc-sdp/tide": {
-            "type": "vcs",
-            "no-api": true,
-            "url": "https://github.com/dpc-sdp/tide.git"
         },
         "dpc-sdp/tide_alert": {
             "type": "vcs",

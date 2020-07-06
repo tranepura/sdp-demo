@@ -22,7 +22,7 @@ services:
     - '@database'
     - '@plugin.manager.simple_sitemap.sitemap_type'
     - '@plugin.manager.simple_sitemap.url_generator'
-    - '@plugin.manager.simple_sitemap.sitemap_generator'
+    - '@plugin.manager.simple_sitemap.generator'
     - '@simple_sitemap.settings'
 
   simple_sitemap.settings:
@@ -97,7 +97,7 @@ services:
     class: Drupal\simple_sitemap\Plugin\simple_sitemap\UrlGenerator\UrlGeneratorManager
     parent: default_plugin_manager
 
-  plugin.manager.simple_sitemap.sitemap_generator:
+  plugin.manager.simple_sitemap.generator:
     class: Drupal\simple_sitemap\Plugin\simple_sitemap\SitemapGenerator\SitemapGeneratorManager
     parent: default_plugin_manager
 

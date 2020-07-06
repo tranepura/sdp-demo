@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4515ea28f0188ddcdfe215bcc34d4f5c",
+    "content-hash": "a146ffb4275a66f6e610ef01072ddc2a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1126,6 +1126,114 @@
             "time": "2020-06-05T16:46:05+00:00"
         },
         {
+            "name": "doctrine/dbal",
+            "version": "2.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "aab745e7b6b2de3b47019da81e7225e14dcfdac8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/aab745e7b6b2de3b47019da81e7225e14dcfdac8",
+                "reference": "aab745e7b6b2de3b47019da81e7225e14dcfdac8",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "ext-pdo": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "jetbrains/phpstorm-stubs": "^2019.1",
+                "nikic/php-parser": "^4.4",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.4.1",
+                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
+                "vimeo/psalm": "^3.11"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "db2",
+                "dbal",
+                "mariadb",
+                "mssql",
+                "mysql",
+                "oci8",
+                "oracle",
+                "pdo",
+                "pgsql",
+                "postgresql",
+                "queryobject",
+                "sasql",
+                "sql",
+                "sqlanywhere",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-20T17:19:26+00:00"
+        },
+        {
             "name": "doctrine/event-manager",
             "version": "1.1.0",
             "source": {
@@ -1545,8 +1653,109 @@
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
+            "name": "dpc-sdp/tide_alert",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_alert.git",
+                "reference": "8086c4ce63dc125bbabfa893ffca7019395a2e8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_alert/zipball/8086c4ce63dc125bbabfa893ffca7019395a2e8e",
+                "reference": "8086c4ce63dc125bbabfa893ffca7019395a2e8e",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_media": "^1.5.1"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Alert content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-06-12T06:30:05+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_api",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_api.git",
+                "reference": "33c89bc0b0907d64ae5da31f09f7231390de2ba7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_api/zipball/33c89bc0b0907d64ae5da31f09f7231390de2ba7",
+                "reference": "33c89bc0b0907d64ae5da31f09f7231390de2ba7",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.6.0",
+                "drupal/jsonapi_extras": "^3.8",
+                "drupal/schemata": "^1.0-alpha2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "enable-patching": true,
+                "composer-exit-on-patch-failure": true,
+                "patches": {
+                    "drupal/core": {
+                        "Menu content is not accessible via jsonapi - https://www.drupal.org/node/2915792": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Content API for Tide distribution.",
+            "time": "2020-06-11T02:19:45+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_authenticated_content",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_authenticated_content.git",
+                "reference": "49220b8052f8ed9880702982a6faea20d015530e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_authenticated_content/zipball/49220b8052f8ed9880702982a6faea20d015530e",
+                "reference": "49220b8052f8ed9880702982a6faea20d015530e",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.10",
+                "dpc-sdp/tide_event": "^1.3.1",
+                "dpc-sdp/tide_landing_page": "^1.2.1",
+                "dpc-sdp/tide_media": "^1.5.1",
+                "dpc-sdp/tide_site": "^1.1.14",
+                "drupal/jsonapi_extras": "^3.8",
+                "drupal/jwt": "1.0-beta1",
+                "drupal/permissions_by_term": "v2.12"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/permissions_by_term": {
+                        "Jsonapi integration - https://www.drupal.org/project/permissions_by_term/issues/3032557": "https://www.drupal.org/files/issues/2019-02-13/permissions_by_term-jsonapi_integration-3032557-2-8.26.patch"
+                    },
+                    "drupal/jwt": {
+                        "Adding configuration for the JWT timeout - https://www.drupal.org/project/jwt/issues/2782571": "https://www.drupal.org/files/issues/2019-02-14/jwt-make_expiration_time_configurable-2782571-5.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Allows content administrators to protect pages and sections with user authentication",
+            "time": "2020-06-02T04:45:44+00:00"
+        },
+        {
             "name": "dpc-sdp/tide_core",
-            "version": "dev-master",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dpc-sdp/tide_core.git",
@@ -1602,7 +1811,6 @@
                 "drupal/scheduled_transitions": "^1.0",
                 "drupal/scheduled_updates": "^1.0-alpha7",
                 "drupal/seckit": "^1.1",
-                "drupal/simple_sitemap": "^2.12",
                 "drupal/smart_trim": "^1.1",
                 "drupal/smtp": "^1.0@RC",
                 "drupal/stage_file_proxy": "1.0-rc2",
@@ -1668,6 +1876,465 @@
             ],
             "description": "Core functionality for Tide Drupal 8 distribution",
             "time": "2020-06-18T01:17:10+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_demo_content",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_demo_content.git",
+                "reference": "41590a9296983e29eb3f75bd520c19e6dc7893fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_demo_content/zipball/41590a9296983e29eb3f75bd520c19e6dc7893fe",
+                "reference": "41590a9296983e29eb3f75bd520c19e6dc7893fe",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "drupal/yaml_content": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": []
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Create demo content for Tide modules.",
+            "time": "2020-05-04T04:46:01+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_event",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_event.git",
+                "reference": "e2990c47ab39e5bd71d58bf635fdff6b1b335976"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_event/zipball/e2990c47ab39e5bd71d58bf635fdff6b1b335976",
+                "reference": "e2990c47ab39e5bd71d58bf635fdff6b1b335976",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_media": "^1.5.1",
+                "dpc-sdp/tide_webform": "^1.1.6"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "enable-patching": true,
+                "composer-exit-on-patch-failure": true,
+                "patches": []
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Event content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-01-21T00:06:28+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_event_atdw",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_event_atdw.git",
+                "reference": "3dc45fae3a2c3f296128db8ed6d97701d819a7ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_event_atdw/zipball/3dc45fae3a2c3f296128db8ed6d97701d819a7ad",
+                "reference": "3dc45fae3a2c3f296128db8ed6d97701d819a7ad",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_event": "^1.3.1",
+                "drupal/migrate_cron": "^1.2",
+                "drupal/migrate_file": "^1.1",
+                "drupal/migrate_plus": "4.2",
+                "drupal/migrate_tools": "^4.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "enable-patching": true,
+                "patches": {
+                    "drupal/migrate_plus": {
+                        "EntityGenerate does not process the values correctly - https://www.drupal.org/project/migrate_plus/issues/2975266": "https://www.drupal.org/files/issues/2019-02-21/migrate_plus-provide_multiple_values-2975266-20.patch",
+                        "Simple XML broken with UTF-16LE - https://www.drupal.org/project/migrate_plus/issues/3051858": "https://www.drupal.org/files/issues/2019-05-01/3051858-migrate_plus-simplexml_remove_trim-2.patch"
+                    },
+                    "drupal/migrate_cron": {
+                        "Provide the ability to execute dependent migrations - https://www.drupal.org/project/migrate_cron/issues/3051619#comment-13087893": "https://www.drupal.org/files/issues/2019-04-30/3051619-migrate_cron-execute_dependencies-2.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides event importer from Australian Tourism Data Warehouse for Tide Drupal 8 distribution",
+            "time": "2020-01-21T02:05:30+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_grant",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_grant.git",
+                "reference": "e5031fc4d47ac3fe6b4c1761a01508adff5e1fb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_grant/zipball/e5031fc4d47ac3fe6b4c1761a01508adff5e1fb4",
+                "reference": "e5031fc4d47ac3fe6b4c1761a01508adff5e1fb4",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_media": "^1.5.1",
+                "dpc-sdp/tide_webform": "^1.1.8",
+                "drupal/migrate_cron": "^1.2",
+                "drupal/migrate_plus": "4.2",
+                "drupal/migrate_tools": "^4.4",
+                "drupal/range": "^1.1"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "enable-patching": true,
+                "patches": {
+                    "drupal/migrate_plus": {
+                        "EntityGenerate does not process the values correctly - https://www.drupal.org/project/migrate_plus/issues/2975266": "https://www.drupal.org/files/issues/2019-02-21/migrate_plus-provide_multiple_values-2975266-20.patch",
+                        "Simple XML broken with UTF-16LE - https://www.drupal.org/project/migrate_plus/issues/3051858": "https://www.drupal.org/files/issues/2019-05-01/3051858-migrate_plus-simplexml_remove_trim-2.patch"
+                    },
+                    "drupal/migrate_cron": {
+                        "Provide the ability to execute dependent migrations - https://www.drupal.org/project/migrate_cron/issues/3051619#comment-13087893": "https://www.drupal.org/files/issues/2019-04-30/3051619-migrate_cron-execute_dependencies-2.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Grant content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-01-21T02:11:27+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_landing_page",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_landing_page.git",
+                "reference": "31e25442a8896885251d93c5f0627995c7f950f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_landing_page/zipball/31e25442a8896885251d93c5f0627995c7f950f2",
+                "reference": "31e25442a8896885251d93c5f0627995c7f950f2",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.8",
+                "dpc-sdp/tide_event": "^1.3.1",
+                "dpc-sdp/tide_media": "^1.5.1"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode",
+                "dpc-sdp/tide_news:^1.1.5": "News content type and related configuration for Tide Drupal 8 distribution",
+                "dpc-sdp/tide_webform:1.2.4": "Allows to use questionnaires"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Landing Page content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-06-01T10:13:22+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_media",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_media.git",
+                "reference": "4255de9fb14b59f8c740cc4d4c20258d855b372b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_media/zipball/4255de9fb14b59f8c740cc4d4c20258d855b372b",
+                "reference": "4255de9fb14b59f8c740cc4d4c20258d855b372b",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.6.0",
+                "drupal/embed": "^1.1",
+                "drupal/inline_entity_form": "^1.0-rc1",
+                "drupal/svg_image": "^1.10",
+                "drupal/video_embed_field": "^2.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Media and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-06-11T02:13:42+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_monsido",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_monsido.git",
+                "reference": "0756b9f193f00a125bb3e28282bd97033bf9e363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_monsido/zipball/0756b9f193f00a125bb3e28282bd97033bf9e363",
+                "reference": "0756b9f193f00a125bb3e28282bd97033bf9e363",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.2.5"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides Monsido integration for Tide Drupal 8 distribution",
+            "time": "2019-06-18T05:42:14+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_news",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_news.git",
+                "reference": "a5c9ede561ecda461cf350e95b9351d8d91b8206"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_news/zipball/a5c9ede561ecda461cf350e95b9351d8d91b8206",
+                "reference": "a5c9ede561ecda461cf350e95b9351d8d91b8206",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.2.5",
+                "dpc-sdp/tide_media": "^1.2.5"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode",
+                "dpc-sdp/tide_webform:^1.1.6": "Allows to use questionnaires"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "News content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2019-08-15T06:03:58+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_page",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_page.git",
+                "reference": "0b5edcbfc13cf2b56fc3cbad110d5fb7ae01a773"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_page/zipball/0b5edcbfc13cf2b56fc3cbad110d5fb7ae01a773",
+                "reference": "0b5edcbfc13cf2b56fc3cbad110d5fb7ae01a773",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.2.6",
+                "dpc-sdp/tide_media": "^1.2.6"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.11": "Allows to use Drupal in headless mode",
+                "dpc-sdp/tide_webform:^1.1.8": "Allows to use questionnaires"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Page content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2019-08-16T01:04:33+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_profile",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_profile.git",
+                "reference": "9b6e94da7a8cf4abae0afd3c9aac356b9276780b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_profile/zipball/9b6e94da7a8cf4abae0afd3c9aac356b9276780b",
+                "reference": "9b6e94da7a8cf4abae0afd3c9aac356b9276780b",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_landing_page": "^1.2.1",
+                "dpc-sdp/tide_media": "^1.5.1"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Profile content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-01-21T02:15:12+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_publication",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_publication.git",
+                "reference": "be4c45981e582d599699592b76a4dec1d5b130d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_publication/zipball/be4c45981e582d599699592b76a4dec1d5b130d7",
+                "reference": "be4c45981e582d599699592b76a4dec1d5b130d7",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.5.4",
+                "dpc-sdp/tide_landing_page": "^1.2.1",
+                "drupal/entity_hierarchy": "~2.0"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.2.6": "Allows to use Drupal in headless mode"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Publication content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-06-11T02:58:27+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_search",
+            "version": "1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_search.git",
+                "reference": "9b2a8f0af6daa60ebc11cb52b2fbb84a5b670d60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_search/zipball/9b2a8f0af6daa60ebc11cb52b2fbb84a5b670d60",
+                "reference": "9b2a8f0af6daa60ebc11cb52b2fbb84a5b670d60",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.2.8",
+                "drupal/elasticsearch_connector": "^5.0-alpha3",
+                "drupal/search_api": "^1.11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/elasticsearch_connector": {
+                        "Failed to parse node status - https://www.drupal.org/project/elasticsearch_connector/issues/2978005": "https://www.drupal.org/files/issues/2018-06-07/elasticsearch_connector-convert_boolean_fields-2978005-2.patch",
+                        "Allow index name flexibility - https://www.drupal.org/project/elasticsearch_connector/issues/3010955#comment-12998995": "https://www.drupal.org/files/issues/2019-03-05/3010955-10.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Search configuration for Tide Drupal 8 distribution",
+            "time": "2019-08-26T01:14:22+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_site",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_site.git",
+                "reference": "86f8d7586e335126c2137bc10d1dca0feb653d2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_site/zipball/86f8d7586e335126c2137bc10d1dca0feb653d2c",
+                "reference": "86f8d7586e335126c2137bc10d1dca0feb653d2c",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.6.0",
+                "dpc-sdp/tide_media": "^1.7.0"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api": "^1.5.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Post content to multiple sites and sections.",
+            "time": "2020-06-11T02:37:56+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_test",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_test.git",
+                "reference": "ecdab1dca2095d538eaa74bf97639fbf2f699f87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_test/zipball/ecdab1dca2095d538eaa74bf97639fbf2f699f87",
+                "reference": "ecdab1dca2095d538eaa74bf97639fbf2f699f87",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Test content type and related configuration for Tide Drupal 8 distribution",
+            "time": "2020-05-20T23:29:40+00:00"
+        },
+        {
+            "name": "dpc-sdp/tide_webform",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dpc-sdp/tide_webform.git",
+                "reference": "662b44510bbf67ff52928c2b355ca4ab9b7b469f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dpc-sdp/tide_webform/zipball/662b44510bbf67ff52928c2b355ca4ab9b7b469f",
+                "reference": "662b44510bbf67ff52928c2b355ca4ab9b7b469f",
+                "shasum": ""
+            },
+            "require": {
+                "dpc-sdp/tide_core": "^1.6.0",
+                "drupal/token_conditions": "dev-1.x",
+                "drupal/webform": "^5.14"
+            },
+            "suggest": {
+                "dpc-sdp/tide_api:^1.5.0": "Allows to use Drupal in headless mode"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Webform configuration for Tide Drupal 8 distribution",
+            "time": "2020-06-11T03:59:37+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
@@ -2489,6 +3156,7 @@
                     }
                 },
                 "patches_applied": {
+                    "Menu content is not accessible via jsonapi - https://www.drupal.org/node/2915792": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch",
                     "Contextual links should not be added inside another link - https://www.drupal.org/node/2898875": "https://www.drupal.org/files/issues/2018-03-16/contextual_links_should-2898875-6.patch",
                     "Custom blocks are no longer displayed and no longer appear in the custom block library - https://www.drupal.org/project/drupal/issues/2997898#comment-12832813": "https://www.drupal.org/files/issues/2018-10-27/2997898-21.patch",
                     "Unrecognised entity operation passed to Menu Link Content throws exceptions - https://www.drupal.org/project/drupal/issues/3016038": "https://www.drupal.org/files/issues/2019-03-03/3016038-menu-link-operation-8.patch",
@@ -2608,6 +3276,52 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/dbal",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/dbal.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dbal-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "bb725113ceb755c56e6ff88a38eb951c5145e4b3"
+            },
+            "require": {
+                "doctrine/dbal": "^2.5",
+                "drupal/core": "^8.8 || ^9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1588044947",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL2+"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Rowlands",
+                    "homepage": "https://www.drupal.org/user/395439",
+                    "email": "lee.rowlands@previousnext.com.au"
+                }
+            ],
+            "description": "Provides a Doctrine/DBAL connection from your Database connection settings.",
+            "homepage": "https://www.drupal.org/project/dbal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/dbal"
             }
         },
         {
@@ -2798,6 +3512,84 @@
             "homepage": "https://www.drupal.org/project/editor_advanced_link",
             "support": {
                 "source": "https://git.drupalcode.org/project/editor_advanced_link"
+            }
+        },
+        {
+            "name": "drupal/elasticsearch_connector",
+            "version": "5.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/elasticsearch_connector.git",
+                "reference": "8.x-5.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/elasticsearch_connector-8.x-5.0-alpha3.zip",
+                "reference": "8.x-5.0-alpha3",
+                "shasum": "51e4faaa3950fdd1fdb16f703aa89dd252ef7453"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "makinacorpus/php-lucene": "^1.0.2",
+                "nodespark/des-connector": "5.x-dev"
+            },
+            "require-dev": {
+                "behat/mink-selenium2-driver": "^1.3",
+                "bex/behat-screenshot": "^1.2",
+                "drupal/coder": "^8.2",
+                "drupal/drupal-extension": "master-dev",
+                "drupal/search_api": "^1.4",
+                "phpmd/phpmd": "^2.6",
+                "phpmetrics/phpmetrics": "^2.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.0-alpha3",
+                    "datestamp": "1538850780",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "Failed to parse node status - https://www.drupal.org/project/elasticsearch_connector/issues/2978005": "https://www.drupal.org/files/issues/2018-06-07/elasticsearch_connector-convert_boolean_fields-2978005-2.patch",
+                    "Allow index name flexibility - https://www.drupal.org/project/elasticsearch_connector/issues/3010955#comment-12998995": "https://www.drupal.org/files/issues/2019-03-05/3010955-10.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ignatov",
+                    "homepage": "http://www.nodespark.com",
+                    "email": "nignatov@nodespark.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "Prateek Sachan",
+                    "homepage": "http://prateek.sachan.co",
+                    "email": "ps@prateeksachan.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lachezar Valchev",
+                    "homepage": "https://drupal.org/u/lachezar.valchev",
+                    "email": "lachezar.valchev@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/2159059/committers"
+                }
+            ],
+            "description": "Elasticsearch Connector module for Drupal.",
+            "homepage": "https://www.drupal.org/project/elasticsearch_connector",
+            "support": {
+                "source": "https://github.com/nodespark/elasticsearch_connector",
+                "issues": "https://www.drupal.org/project/issues/elasticsearch_connector"
             }
         },
         {
@@ -3031,6 +3823,73 @@
                 "source": "https://git.drupalcode.org/project/entity_embed",
                 "issues": "https://www.drupal.org/project/issues/entity_embed",
                 "irc": "irc://irc.freenode.org/drupal-media"
+            }
+        },
+        {
+            "name": "drupal/entity_hierarchy",
+            "version": "2.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_hierarchy.git",
+                "reference": "8.x-2.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_hierarchy-8.x-2.19.zip",
+                "reference": "8.x-2.19",
+                "shasum": "f7124189fc7c61bd1bb7039a5a173840d7a2670e"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9.0",
+                "drupal/dbal": "~1.0",
+                "previousnext/nested-set": "^0.1.1"
+            },
+            "require-dev": {
+                "drupal/workbench_access": "*",
+                "drupal/workbench_moderation": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.19",
+                    "datestamp": "1593203847",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL2+"
+            ],
+            "authors": [
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "webdrips",
+                    "homepage": "https://www.drupal.org/user/164950"
+                }
+            ],
+            "description": "A module to extend entity-reference fields so that a hierarchy is maintained.",
+            "homepage": "https://www.drupal.org/project/entity_hierarchy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_hierarchy"
             }
         },
         {
@@ -3578,6 +4437,194 @@
             }
         },
         {
+            "name": "drupal/jsonapi_extras",
+            "version": "3.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_extras.git",
+                "reference": "8.x-3.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_extras-8.x-3.14.zip",
+                "reference": "8.x-3.14",
+                "shasum": "bb14d15e29bc985a7757304a26a6ea963122d717"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/jsonapi": "*",
+                "e0ipso/shaper": "^1"
+            },
+            "require-dev": {
+                "drupal/jsonapi": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.14",
+                    "datestamp": "1585437198",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "homepage": "https://www.drupal.org/user/550110",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                },
+                {
+                    "name": "Martin Kolar",
+                    "homepage": "https://www.drupal.org/u/mkolar"
+                },
+                {
+                    "name": "Karel Majzlik",
+                    "homepage": "https://www.drupal.org/u/karlos007"
+                }
+            ],
+            "description": "JSON:API Extras provides a means to override and provide limited configurations to the default zero-configuration implementation provided by the JSON:API module.",
+            "homepage": "https://www.drupal.org/project/jsonapi_extras",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_extras"
+            }
+        },
+        {
+            "name": "drupal/jwt",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jwt.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jwt-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "33b7f84f8bb9391f62235c44e1d655ea0501a2e1"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/key": "~1.3",
+                "firebase/php-jwt": "^4.0 | ^5.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1588533043",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Adding configuration for the JWT timeout - https://www.drupal.org/project/jwt/issues/2782571": "https://www.drupal.org/files/issues/2019-02-14/jwt-make_expiration_time_configurable-2782571-5.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "edwardchiapet",
+                    "homepage": "https://www.drupal.org/user/2354784"
+                },
+                {
+                    "name": "gabesullice",
+                    "homepage": "https://www.drupal.org/user/2287430"
+                },
+                {
+                    "name": "jonathan.green",
+                    "homepage": "https://www.drupal.org/user/3505671"
+                },
+                {
+                    "name": "pwolanin",
+                    "homepage": "https://www.drupal.org/user/49851"
+                }
+            ],
+            "description": "Provides a JSON Web Token authentication provider",
+            "homepage": "https://www.drupal.org/project/jwt",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/jwt",
+                "issues": "http://drupal.org/project/issues/jwt"
+            }
+        },
+        {
+            "name": "drupal/key",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/key.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/key-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "097cec8e86b1c164727ca62521a06c36459754f1"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1591765429",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Cellar Door",
+                    "homepage": "https://www.drupal.org/user/658076"
+                },
+                {
+                    "name": "CrashTest_",
+                    "homepage": "https://www.drupal.org/user/261457"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Provides the ability to manage site-wide keys",
+            "homepage": "http://drupal.org/project/key",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/key",
+                "issues": "http://drupal.org/project/key"
+            }
+        },
+        {
             "name": "drupal/link_field_autocomplete_filter",
             "version": "1.11.0",
             "source": {
@@ -3729,29 +4776,29 @@
         },
         {
             "name": "drupal/maxlength",
-            "version": "1.0.0-beta5",
+            "version": "1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/maxlength.git",
-                "reference": "8.x-1.0-beta5"
+                "reference": "8.x-1.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/maxlength-8.x-1.0-beta5.zip",
-                "reference": "8.x-1.0-beta5",
-                "shasum": "f662a539ec50783f52eb7dd8bdd6cc4675b9c47f"
+                "url": "https://ftp.drupal.org/files/projects/maxlength-8.x-1.0-rc1.zip",
+                "reference": "8.x-1.0-rc1",
+                "shasum": "44eb9d79d9814cd786c2c9874c28033759665a99"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta5",
-                    "datestamp": "1580312227",
+                    "version": "8.x-1.0-rc1",
+                    "datestamp": "1593198218",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3961,6 +5008,229 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
+        },
+        {
+            "name": "drupal/migrate_cron",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_cron.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_cron-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "eaf813c0a626f6d33f59c5d5068d73c2442e6019"
+            },
+            "require": {
+                "drupal/core": "^8",
+                "drupal/migrate_plus": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1549636080",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "Provide the ability to execute dependent migrations - https://www.drupal.org/project/migrate_cron/issues/3051619#comment-13087893": "https://www.drupal.org/files/issues/2019-04-30/3051619-migrate_cron-execute_dependencies-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "vadimski",
+                    "homepage": "https://www.drupal.org/user/3395802"
+                }
+            ],
+            "description": "Run migrations at cron",
+            "homepage": "https://www.drupal.org/project/migrate_cron",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_cron"
+            }
+        },
+        {
+            "name": "drupal/migrate_file",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_file.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_file-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "4a24edc577541b5aa67682a4f89c8dfd7c0788d5"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1539064380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "drclaw",
+                    "homepage": "https://www.drupal.org/user/823702"
+                }
+            ],
+            "description": "Additional support for migrating files including downloading remote files and using remote uris (without download)",
+            "homepage": "https://www.drupal.org/project/migrate_file",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_file",
+                "issues": "https://www.drupal.org/project/issues/migrate_file"
+            }
+        },
+        {
+            "name": "drupal/migrate_plus",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_plus.git",
+                "reference": "8.x-4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-4.2.zip",
+                "reference": "8.x-4.2",
+                "shasum": "5736a43e39cc5c091d54ceef2849ea35ba979af3"
+            },
+            "require": {
+                "drupal/core": "^8.3"
+            },
+            "require-dev": {
+                "drupal/entity": "*",
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*",
+                "drupal/migrate_tools": "*",
+                "drupal/profile": "*"
+            },
+            "suggest": {
+                "ext-soap": "*",
+                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.2",
+                    "datestamp": "1555683487",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "patches_applied": {
+                    "EntityGenerate does not process the values correctly - https://www.drupal.org/project/migrate_plus/issues/2975266": "https://www.drupal.org/files/issues/2019-02-21/migrate_plus-provide_multiple_values-2975266-20.patch",
+                    "Simple XML broken with UTF-16LE - https://www.drupal.org/project/migrate_plus/issues/3051858": "https://www.drupal.org/files/issues/2019-05-01/3051858-migrate_plus-simplexml_remove_trim-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Enhancements to core migration support.",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "support": {
+                "source": "https://cgit.drupalcode.org/migrate_plus",
+                "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "4.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_tools.git",
+                "reference": "8.x-4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.5.zip",
+                "reference": "8.x-4.5",
+                "shasum": "06390b359bf53c50a30f2d6dc4c7542bfb1fe7ca"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/migrate_plus": "^4 || ^5"
+            },
+            "require-dev": {
+                "drupal/migrate_plus": "4.x-dev",
+                "drupal/migrate_source_csv": "^2.2",
+                "drush/drush": "^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.5",
+                    "datestamp": "1574693285",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drupalspoons",
+                    "homepage": "https://www.drupal.org/user/3647684"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "http://drupal.org/project/migrate_tools",
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_tools",
+                "issues": "http://drupal.org/project/migrate_tools",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
             }
         },
         {
@@ -4283,6 +5553,63 @@
             }
         },
         {
+            "name": "drupal/permissions_by_term",
+            "version": "2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/permissions_by_term.git",
+                "reference": "8.x-2.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/permissions_by_term-8.x-2.12.zip",
+                "reference": "8.x-2.12",
+                "shasum": "e0992054ba1712bef3ab603d33e8a0d00ce6572b"
+            },
+            "require": {
+                "drupal/core": "^8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.12",
+                    "datestamp": "1577477888",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "patches_applied": {
+                    "Jsonapi integration - https://www.drupal.org/project/permissions_by_term/issues/3032557": "https://www.drupal.org/files/issues/2019-02-13/permissions_by_term-jsonapi_integration-3032557-2-8.26.patch",
+                    "scheduled_transitions module integration issue - https://www.drupal.org/project/permissions_by_term/issues/3065986#comment-13171384": "https://www.drupal.org/files/issues/2019-07-05/permissions_by_term-issue-3065986-D8.6.16.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Majmesku",
+                    "homepage": "https://www.drupal.org/user/786132",
+                    "email": "p.majmesku@gmail.com"
+                },
+                {
+                    "name": "SaschaHannes",
+                    "homepage": "https://www.drupal.org/user/3536189"
+                },
+                {
+                    "name": "marcoliver",
+                    "homepage": "https://www.drupal.org/user/1529744"
+                }
+            ],
+            "description": "Restricts access to nodes by taxonomy terms in relation to users and their roles.",
+            "homepage": "https://www.drupal.org/project/permissions_by_term",
+            "support": {
+                "source": "https://git.drupalcode.org/project/permissions_by_term"
+            }
+        },
+        {
             "name": "drupal/prlp",
             "version": "1.6.0",
             "source": {
@@ -4392,6 +5719,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/queue_mail",
                 "issues": "https://www.drupal.org/project/issues/queue_mail"
+            }
+        },
+        {
+            "name": "drupal/range",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/range.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/range-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "6d37a88b18fa98c0bd72814362977f21af7ef4aa"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1591131665",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Taran2L",
+                    "homepage": "https://www.drupal.org/user/473438"
+                },
+                {
+                    "name": "ribel",
+                    "homepage": "https://www.drupal.org/user/1449610"
+                }
+            ],
+            "description": "Defines a numeric range field type.",
+            "homepage": "https://www.drupal.org/project/range",
+            "support": {
+                "source": "https://git.drupalcode.org/project/range"
             }
         },
         {
@@ -4600,6 +5975,178 @@
             }
         },
         {
+            "name": "drupal/schemata",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/schemata.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/schemata-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "c50bc45c370073224877a8c72e6d8d5b2ec732d3"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.2",
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "league/json-guard": "^1.0",
+                "league/json-reference": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1585777919",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "phpcs --standard=tests/phpcs.xml"
+                ],
+                "phpcbf": [
+                    "phpcbf --standard=tests/phpcs.xml"
+                ],
+                "lint": [
+                    "parallel-lint -e php,module,install,profile,theme,inc --exclude vendor/ --blame ."
+                ],
+                "quality": [
+                    "@lint",
+                    "@phpcs"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Ross",
+                    "homepage": "https://www.drupal.org/user/346868",
+                    "email": "grayside@gmail.com"
+                },
+                {
+                    "name": "HalfChem",
+                    "homepage": "https://www.drupal.org/user/1608382"
+                },
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "febbraro",
+                    "homepage": "https://www.drupal.org/user/43670"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "mpotter",
+                    "homepage": "https://www.drupal.org/user/616192"
+                },
+                {
+                    "name": "richgerdes",
+                    "homepage": "https://www.drupal.org/user/3437973"
+                },
+                {
+                    "name": "tekante",
+                    "homepage": "https://www.drupal.org/user/640024"
+                }
+            ],
+            "description": "Facilitate generation of schema definitions of Drupal 8 data models.",
+            "homepage": "https://drupal.org/project/schemata",
+            "keywords": [
+                "Drupal",
+                "json",
+                "schema"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/schemata",
+                "issues": "https://drupal.org/project/issues/schemata"
+            }
+        },
+        {
+            "name": "drupal/search_api",
+            "version": "1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api.git",
+                "reference": "8.x-1.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "a9f3352f1c8c893c7032c11f00a23f76b9733b56"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "conflict": {
+                "drupal/search_api_solr": "2.* || 3.0 || 3.1"
+            },
+            "require-dev": {
+                "drupal/language_fallback_fix": "@dev",
+                "drupal/search_api_autocomplete": "@dev",
+                "drupal/search_api_db": "*"
+            },
+            "suggest": {
+                "drupal/facets": "Adds the ability to create faceted searches.",
+                "drupal/search_api_autocomplete": "Allows adding autocomplete suggestions to search fields.",
+                "drupal/search_api_solr": "Adds support for using Apache Solr as a backend."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.17",
+                    "datestamp": "1591128369",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Seidl",
+                    "homepage": "https://www.drupal.org/u/drunken-monkey"
+                },
+                {
+                    "name": "Nick Veenhof",
+                    "homepage": "https://www.drupal.org/u/nick_vh"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/790418/committers"
+                }
+            ],
+            "description": "Provides a generic framework for modules offering search capabilities.",
+            "homepage": "https://www.drupal.org/project/search_api",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api",
+                "issues": "https://www.drupal.org/project/issues/search_api",
+                "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
             "name": "drupal/seckit",
             "version": "1.2.0",
             "source": {
@@ -4658,64 +6205,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/seckit",
                 "issues": "http://drupal.org/project/issues/seckit"
-            }
-        },
-        {
-            "name": "drupal/simple_sitemap",
-            "version": "2.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "8.x-2.12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-8.x-2.12.zip",
-                "reference": "8.x-2.12",
-                "shasum": "fe1c1a636adfba8358399a5a1ccdf20685066573"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.12",
-                    "datestamp": "1542505221",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pawel Ginalski (gbyte.co)",
-                    "homepage": "https://www.drupal.org/u/gbyte.co",
-                    "email": "contact@gbyte.co",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Sam Becker (Sam152)",
-                    "homepage": "https://www.drupal.org/u/sam152",
-                    "role": "Co-maintainer"
-                }
-            ],
-            "description": "Simple XML sitemap creates a standard conform XML sitemap of your content.",
-            "homepage": "https://drupal.org/project/simple_sitemap",
-            "support": {
-                "source": "https://cgit.drupalcode.org/simple_sitemap",
-                "issues": "https://drupal.org/project/issues/simple_sitemap",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -4926,6 +6415,57 @@
             "homepage": "https://www.drupal.org/project/stage_file_proxy",
             "support": {
                 "source": "https://git.drupalcode.org/project/stage_file_proxy"
+            }
+        },
+        {
+            "name": "drupal/svg_image",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/svg_image.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "0a6ca8104995a8cf4a1fff3e9e04e1fecf734b11"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "enshrined/svg-sanitize": ">=0.9 <1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1591251834",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Yaroslav Lushnikov",
+                    "homepage": "https://www.drupal.org/user/2870933",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2887125/committers"
+                }
+            ],
+            "description": "Overrides the standard image formatter and widget to support SVG files.",
+            "homepage": "http://drupal.org/project/svg_image",
+            "support": {
+                "source": "http://cgit.drupalcode.org/svg_image",
+                "issues": "http://drupal.org/project/svg_image"
             }
         },
         {
@@ -5161,6 +6701,62 @@
             }
         },
         {
+            "name": "drupal/video_embed_field",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/video_embed_field.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/video_embed_field-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "96b14bb93c1bb6a07b84315a4f87367870f8b574"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/colorbox": "^1.0",
+                "drupal/video_embed_media": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1587686337",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                },
+                {
+                    "name": "jec006",
+                    "homepage": "https://www.drupal.org/user/855980"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                }
+            ],
+            "description": "A pluggable field type for storing videos from external video hosts such as Vimeo and YouTube.",
+            "homepage": "https://www.drupal.org/project/video_embed_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/video_embed_field"
+            }
+        },
+        {
             "name": "drupal/views_menu_children_filter",
             "version": "1.0.0-beta3",
             "source": {
@@ -5272,6 +6868,128 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/viewsreference",
                 "issues": "http://drupal.org/project/issues/viewsreference"
+            }
+        },
+        {
+            "name": "drupal/webform",
+            "version": "5.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform.git",
+                "reference": "8.x-5.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.19.zip",
+                "reference": "8.x-5.19",
+                "shasum": "90a2084c2647bca791cc8b18a7e2a3b49f3da7ea"
+            },
+            "require": {
+                "drupal/core": "^8.8"
+            },
+            "require-dev": {
+                "drupal/address": "~1.0",
+                "drupal/bootstrap": "~3.0",
+                "drupal/captcha": "~1.0",
+                "drupal/chosen": "~2.0",
+                "drupal/clientside_validation": "~3.0",
+                "drupal/clientside_validation_jquery": "*",
+                "drupal/devel": "~3.0",
+                "drupal/entity_print": "~2.0",
+                "drupal/gnode": "*",
+                "drupal/group": "~1.0",
+                "drupal/lingotek": "~3.0",
+                "drupal/mailsystem": "~4.0",
+                "drupal/paragraphs": "~1.0",
+                "drupal/select2": "~1.0",
+                "drupal/smtp": "~1.0",
+                "drupal/styleguide": "~1.0",
+                "drupal/telephone_validation": "~2.0",
+                "drupal/token": "~1.0",
+                "drupal/webform_access": "*",
+                "drupal/webform_attachment": "*",
+                "drupal/webform_clientside_validation": "*",
+                "drupal/webform_devel": "*",
+                "drupal/webform_entity_print": "*",
+                "drupal/webform_group": "*",
+                "drupal/webform_node": "*",
+                "drupal/webform_options_limit": "*",
+                "drupal/webform_scheduled_email": "*",
+                "drupal/webform_share": "*",
+                "drupal/webform_ui": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.19",
+                    "datestamp": "1593681136",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Alexander Trotsenko (bucefal91)",
+                    "homepage": "https://www.drupal.org/u/bucefal91",
+                    "role": "Co-maintainer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://www.drupal.org/node/7404/committers",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "sanchiz",
+                    "homepage": "https://www.drupal.org/user/1671246"
+                },
+                {
+                    "name": "tedbow",
+                    "homepage": "https://www.drupal.org/user/240860"
+                },
+                {
+                    "name": "torotil",
+                    "homepage": "https://www.drupal.org/user/865256"
+                }
+            ],
+            "description": "Enables the creation of webforms and questionnaires.",
+            "homepage": "https://drupal.org/project/webform",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform",
+                "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/webform",
+                "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
             }
         },
         {
@@ -5414,6 +7132,66 @@
             }
         },
         {
+            "name": "drupal/yaml_content",
+            "version": "1.0.0-alpha7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/yaml_content.git",
+                "reference": "8.x-1.0-alpha7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/yaml_content-8.x-1.0-alpha7.zip",
+                "reference": "8.x-1.0-alpha7",
+                "shasum": "9aaf271446a64c9bffc5639589d5c8e6dc40c06c"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha7",
+                    "datestamp": "1588173300",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                },
+                {
+                    "name": "slucero",
+                    "homepage": "https://www.drupal.org/user/1612534"
+                }
+            ],
+            "description": "Demo content generator using yaml content templates.",
+            "homepage": "https://www.drupal.org/project/yaml_content",
+            "support": {
+                "source": "https://git.drupalcode.org/project/yaml_content"
+            }
+        },
+        {
             "name": "drush/drush",
             "version": "8.3.2",
             "source": {
@@ -5525,6 +7303,48 @@
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
             "time": "2019-11-26T22:34:50+00:00"
+        },
+        {
+            "name": "e0ipso/shaper",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/e0ipso/shaper.git",
+                "reference": "04e17ee682d1a66726378d7d2c2a9a9b4d6984eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/e0ipso/shaper/zipball/04e17ee682d1a66726378d7d2c2a9a9b4d6984eb",
+                "reference": "04e17ee682d1a66726378d7d2c2a9a9b4d6984eb",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "^5.2"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpcov": "^5.0",
+                "phpunit/phpunit": "^7.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shaper\\": "src",
+                    "Shaper\\Tests\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                }
+            ],
+            "description": "Lightweight library to handle in and out transformations in PHP.",
+            "time": "2019-07-27T10:13:44+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -5647,17 +7467,113 @@
             "time": "2020-06-16T20:11:17+00:00"
         },
         {
-            "name": "ezyang/htmlpurifier",
-            "version": "v4.12.0",
+            "name": "elasticsearch/elasticsearch",
+            "version": "v5.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "a617e55bc62a87eec73bd456d146d134ad716f03"
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "48b8a90e2b97b4d69ce42851c1b9e59f8054661a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/a617e55bc62a87eec73bd456d146d134ad716f03",
-                "reference": "a617e55bc62a87eec73bd456d146d134ad716f03",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/48b8a90e2b97b4d69ce42851c1b9e59f8054661a",
+                "reference": "48b8a90e2b97b4d69ce42851c1b9e59f8054661a",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": "^5.6|^7.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "doctrine/inflector": "^1.1",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "^4.7|^5.4",
+                "sami/sami": "~3.2",
+                "symfony/finder": "^2.8",
+                "symfony/yaml": "^2.8"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2019-07-18T15:11:30+00:00"
+        },
+        {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.13.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "bc66593f255b7d2613d8f22041180036979b6403"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/bc66593f255b7d2613d8f22041180036979b6403",
+                "reference": "bc66593f255b7d2613d8f22041180036979b6403",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "^0.1.2",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "time": "2020-01-20T01:34:17+00:00"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
+                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
                 "shasum": ""
             },
             "require": {
@@ -5673,6 +7589,9 @@
                 },
                 "files": [
                     "library/HTMLPurifier.composer.php"
+                ],
+                "exclude-from-classmap": [
+                    "/library/HTMLPurifier/Language/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5691,7 +7610,57 @@
             "keywords": [
                 "html"
             ],
-            "time": "2019-10-28T03:44:26+00:00"
+            "time": "2020-06-29T00:56:53+00:00"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "time": "2020-03-25T18:49:23+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -5883,6 +7852,175 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/5e2a174052995663dd68e6b5ad838afd47dd615b",
+                "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "abandoned": true,
+            "time": "2018-07-31T13:22:33+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "abandoned": true,
+            "time": "2014-10-12T19:18:40+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "5.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2020-05-27T16:41:55+00:00"
+        },
+        {
             "name": "kub-at/php-simple-html-dom-parser",
             "version": "1.9.1",
             "source": {
@@ -5929,17 +8067,61 @@
             "time": "2019-10-25T12:34:43+00:00"
         },
         {
-            "name": "masterminds/html5",
-            "version": "2.7.1",
+            "name": "makinacorpus/php-lucene",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d"
+                "url": "https://github.com/makinacorpus/php-lucene-query.git",
+                "reference": "31ecc79dd750a1f82c0aacacd79117ee94d2bfb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/a3edfe52f9e7380e498d33157e1330e85386645d",
-                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d",
+                "url": "https://api.github.com/repos/makinacorpus/php-lucene-query/zipball/31ecc79dd750a1f82c0aacacd79117ee94d2bfb0",
+                "reference": "31ecc79dd750a1f82c0aacacd79117ee94d2bfb0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "exclude-from-classmap": [
+                    "src/Tests/"
+                ],
+                "psr-4": {
+                    "MakinaCorpus\\Lucene\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Minimalistic, feature-rich, PHP Lucene syntax query builder",
+            "homepage": "http://github.com/makinacorpus/php-lucene",
+            "time": "2017-09-26T16:37:27+00:00"
+        },
+        {
+            "name": "masterminds/html5",
+            "version": "2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "aad73dbfefd71d46072138109ce1288d96c329cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/aad73dbfefd71d46072138109ce1288d96c329cc",
+                "reference": "aad73dbfefd71d46072138109ce1288d96c329cc",
                 "shasum": ""
             },
             "require": {
@@ -5993,7 +8175,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2020-02-06T11:39:04+00:00"
+            "time": "2020-07-05T07:53:37+00:00"
         },
         {
             "name": "mkalkbrenner/php-htmldiff-advanced",
@@ -6034,16 +8216,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.5.0",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463"
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/53c2753d756f5adb586dca79c2ec0e2654dd9463",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c346bbfafe2ff60680258b631afb730d186ed864",
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864",
                 "shasum": ""
             },
             "require": {
@@ -6082,7 +8264,55 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-06-03T07:24:19+00:00"
+            "time": "2020-07-02T17:12:47+00:00"
+        },
+        {
+            "name": "nodespark/des-connector",
+            "version": "5.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nodespark/des-connector.git",
+                "reference": "104948f8e116a5bbad570c6d1129d22d4694d661"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/104948f8e116a5bbad570c6d1129d22d4694d661",
+                "reference": "104948f8e116a5bbad570c6d1129d22d4694d661",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "~5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nodespark\\DESConnector\\": "src/DESConnector/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ignatov",
+                    "email": "nignatov@nodespark.com",
+                    "homepage": "http://www.nodespark.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "Lachezar Valchev",
+                    "email": "lachezar.valchev@gmail.com",
+                    "homepage": "https://drupal.org/u/lachezar.valchev",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
+            "homepage": "https://github.com/nodespark/des-connector",
+            "time": "2018-11-09T13:19:56+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -6465,6 +8695,47 @@
             "time": "2020-05-27T12:24:03+00:00"
         },
         {
+            "name": "previousnext/nested-set",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/previousnext/nested-set.git",
+                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/previousnext/nested-set/zipball/d471ba1cab04066d33ff7a76ba616f8afb873570",
+                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.5"
+            },
+            "require-dev": {
+                "drupal/coder": "~8.0",
+                "pear/console_table": "^1.3",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PNX\\NestedSet\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kim Pepper",
+                    "email": "kim@pepper.id.au"
+                }
+            ],
+            "description": "A PHP Doctrine DBAL implementation for Nested Sets.",
+            "time": "2017-08-16T10:05:11+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -6721,6 +8992,52 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2020-05-12T15:16:56+00:00"
         },
         {
             "name": "stack/builder",
@@ -8707,30 +11024,30 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.42.5",
+            "version": "v1.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e"
+                "reference": "597a03e85a60af6feee4f5127f3ef4279a1694c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
-                "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/597a03e85a60af6feee4f5127f3ef4279a1694c3",
+                "reference": "597a03e85a60af6feee4f5127f3ef4279a1694c3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0",
+                "php": ">=7.1.3",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4|^5.0"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.42-dev"
+                    "dev-master": "1.43-dev"
                 }
             },
             "autoload": {
@@ -8767,7 +11084,29 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2020-02-11T05:59:23+00:00"
+            "funding": [
+                {
+                    "url": "https://certification.symfony.com/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://live.symfony.com/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://symfony.com/cloud/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-05T13:00:49+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
@@ -10792,72 +13131,6 @@
             "time": "2019-08-22T07:22:47+00:00"
         },
         {
-            "name": "justinrainbow/json-schema",
-            "version": "5.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
-                "json-schema/json-schema-test-suite": "1.2.0",
-                "phpunit/phpunit": "^4.8.35"
-            },
-            "bin": [
-                "bin/validate-json"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JsonSchema\\": "src/JsonSchema/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Prieto Reis",
-                    "email": "bruno.p.reis@gmail.com"
-                },
-                {
-                    "name": "Justin Rainbow",
-                    "email": "justin.rainbow@gmail.com"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
-                }
-            ],
-            "description": "A library to validate a json schema.",
-            "homepage": "https://github.com/justinrainbow/json-schema",
-            "keywords": [
-                "json",
-                "schema"
-            ],
-            "time": "2020-05-27T16:41:55+00:00"
-        },
-        {
             "name": "mtdowling/jmespath.php",
             "version": "2.5.0",
             "source": {
@@ -11033,16 +13306,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "10d9019f393773345aedc0dc79e7fd678da874ee"
+                "reference": "9ab7668fee74a5ad61996095e50917bd50ee8bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/10d9019f393773345aedc0dc79e7fd678da874ee",
-                "reference": "10d9019f393773345aedc0dc79e7fd678da874ee",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/9ab7668fee74a5ad61996095e50917bd50ee8bfe",
+                "reference": "9ab7668fee74a5ad61996095e50917bd50ee8bfe",
                 "shasum": ""
             },
             "require": {
@@ -11065,7 +13338,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -11094,7 +13367,7 @@
                 "message",
                 "psr7"
             ],
-            "time": "2020-06-14T10:44:12+00:00"
+            "time": "2020-07-02T11:43:45+00:00"
         },
         {
             "name": "php-http/httplug",
@@ -12178,7 +14451,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dpc-sdp/tide_core": 20,
         "ubirak/rest-api-behat-extension": 20
     },
     "prefer-stable": true,
